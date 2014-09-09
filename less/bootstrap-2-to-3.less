@@ -1,0 +1,67 @@
+@import (reference) "../deps/components/bootstrap/less/bootstrap.less";
+@import (reference) "mixins.less";
+.row-fluid {
+  .make-row();
+}
+.bs-23-make-grid-columns();
+
+.bs-23-make-grid("md");
+
+.brand:extend(.navbar-brand all) {}
+.navbar .nav:extend(.navbar-nav all) {}
+.nav-collapse:extend(.navbar-collapse all) {}
+.nav-toggle:extend(.navbar-toggle all) {}
+.btn-navbar:extend(.navbar-btn all) {}
+.hero-unit:extend(.jumbotron all) {}
+.icon:extend(.glyphicon all) {}
+
+//Damn :extend still doesn't support interpolation :(
+//.icon {
+//  .-(@i: length(@icons)) when (@i > 0) {
+//    @name: e(extract(@icons, @i));
+//    &-@{name}:extend(.icon-@{name}) {}
+//    .-((@i - 1));
+//  } .-;
+//}
+@import "icons.less";
+
+.btn:extend(.btn .btn-default all) {}
+.btn-mini:extend(.btn-xs) {}
+.btn-small:extend(.btn-sm) {}
+.btn-large:extend(.btn-lg) {}
+.alert-error:extend(.alert-danger) {}
+.visible-phone:extend(.visible-xs) {}
+.visible-tablet:extend(.visible-sm) {}
+.visible-desktop:extend(.visible-md) {}
+.hidden-phone:extend(.hidden-xs) {}
+.hidden-tablet:extend(.hidden-sm) {}
+.hidden-desktop:extend(.hidden-md) {}
+.input-block-level:extend(.form-control) {}
+.control-group:extend(.form-group) {}
+.checkbox.inline .radio.inline:extend(.checkbox-inline .radio-inline) {}
+.input-prepend .input-append:extend(.input-group) {}
+.add-on:extend(.input-group-addon) {}
+.img-polaroid:extend(.img-thumbnail) {}
+ul.unstyled:extend(.list-unstyled) {}
+ul.inline:extend(.list-inline) {}
+.muted:extend(.text-muted) {}
+.label:extend(.label .label-default) {}
+.label-important:extend(.label-danger) {}
+.text-error:extend(.text-danger) {}
+.table .error:extend(.table .danger) {}
+.bar:extend(.progress-bar) {}
+.accordion:extend(.panel-group) {}
+.accordion-group:extend(.panel .panel-default) {}
+.accordion-heading:extend(.panel-heading) {}
+.accordion-body:extend(.panel-collapse) {}
+.accordion-inner:extend(.panel-body) {}
+
+.control-group.warning:extend(.form-group.has-warning) {}
+.control-group.error:extend(.form-group.has-error) {}
+.control-group.success:extend(.form-group.has-success) {}
+
+.bar:extend(.progress-bar) {}
+.bar-success:extend(.progress-bar-success) {}
+.bar-info:extend(.progress-bar-info) {}
+.bar-warning:extend(.progress-bar-warning) {}
+.bar-danger:extend(.progress-bar-danger) {}

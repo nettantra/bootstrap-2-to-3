@@ -1,0 +1,71 @@
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `@grid-columns`.
+
+.bs-23-make-grid-columns() {
+  // Common styles for all sizes of grid columns, widths 1-12
+  .col(@index) when (@index = 1) { // initial
+    @item: ~".span@{index}";
+    .col((@index + 1), @item);
+  }
+  .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
+    @item: ~".span@{index}";
+    .col((@index + 1), ~"@{list}, @{item}");
+  }
+  .col(@index, @list) when (@index > @grid-columns) { // terminal
+    @{list} {
+      position: relative;
+      // Prevent columns from collapsing when empty
+      min-height: 1px;
+      // Inner gutter via padding
+      padding-left:  (@grid-gutter-width / 2);
+      padding-right: (@grid-gutter-width / 2);
+    }
+  }
+  .col(1); // kickstart it
+}
+
+.bs-23-float-grid-columns(@class) {
+  .col(@index) when (@index = 1) { // initial
+    @item: ~".span@{index}";
+    .col((@index + 1), @item);
+  }
+  .col(@index, @list) when (@index =< @grid-columns) { // general
+    @item: ~".span@{index}";
+    .col((@index + 1), ~"@{list}, @{item}");
+  }
+  .col(@index, @list) when (@index > @grid-columns) { // terminal
+    @{list} {
+      float: left;
+    }
+  }
+  .col(1); // kickstart it
+}
+
+.bs-23-calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
+  .span@{index} {
+    width: percentage((@index / @grid-columns));
+  }
+}
+.bs-23-calc-grid-column(@index, @class, @type) when (@type = offset) {
+  .offset@{index} {
+    margin-left: percentage((@index / @grid-columns));
+  }
+}
+
+// Basic looping in LESS
+.bs-23-loop-grid-columns(@index, @class, @type) when (@index >= 0) {
+  .bs-23-calc-grid-column(@index, @class, @type);
+  // next iteration
+  .bs-23-loop-grid-columns((@index - 1), @class, @type);
+}
+
+// Create grid for specific class
+.bs-23-make-grid(@class) {
+  .bs-23-float-grid-columns(@class);
+  .bs-23-loop-grid-columns(@grid-columns, @class, width);
+  .bs-23-loop-grid-columns(@grid-columns, @class, pull);
+  .bs-23-loop-grid-columns(@grid-columns, @class, push);
+  .bs-23-loop-grid-columns(@grid-columns, @class, offset);
+}

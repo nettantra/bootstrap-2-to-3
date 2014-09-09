@@ -1,0 +1,29 @@
+{
+  "name": "bootstrap-2-to-3",
+  "description": "This provides a drop-in CSS code to do a direct migration from BootStrap 2 to BootStrap 3 without rewriting HTML.",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nettantra/bootstrap-2-to-3.git"
+  },
+  "author": "NetTantra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nettantra/bootstrap-2-to-3/issues"
+  },
+  "homepage": "https://github.com/nettantra/bootstrap-2-to-3",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-qunit": "~0.5.2",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-uglify": "~0.5.0"
+  }
+}

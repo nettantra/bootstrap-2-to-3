@@ -24,20 +24,26 @@ module.exports = function(grunt) {
         "options": {
         },
         "files": {
+          "dist/tmp/bootstrap-2-to-3-removed.css" : "less/bootstrap-2-to-3-removed.less",
           "dist/bootstrap-2-to-3.css": "less/bootstrap-2-to-3.less"
         }
       }
+    },
+    "clean": {
+      "build": ["dist/tmp"]
     }
   });
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-bower-install-simple');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Default task.
   grunt.registerTask('build', [
     'bower-install-simple:dev',
-    'less:dist'
+    'less:dist',
+    'clean:build'
   ]);
 
 };

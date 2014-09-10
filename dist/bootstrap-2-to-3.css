@@ -467,6 +467,10 @@ ul.inline {
   list-style: none;
   margin-left: -5px;
 }
+.controls-row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
 .input-block-level {
   display: block;
   width: 100%;
@@ -510,6 +514,12 @@ ul.inline {
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
+}
+.help-inline {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
 }
 .btn-group-lg > .btn,
 .btn-large {
@@ -915,7 +925,6 @@ ul.inline {
   border-color: #ebccd1;
   color: #a94442;
 }
-.bar,
 .bar {
   float: left;
   width: 0%;
@@ -931,13 +940,22 @@ ul.inline {
   -o-transition: width 0.6s ease;
   transition: width 0.6s ease;
 }
-.bar-success {
+.progress-striped {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+}
+.bar-success,
+.progress-success {
   background-color: #5cb85c;
 }
-.bar-info {
+.bar-info,
+.progress-info {
   background-color: #5bc0de;
 }
-.bar-warning {
+.bar-warning,
+.progress-warning {
   background-color: #f0ad4e;
 }
 .bar-danger {
@@ -1018,7 +1036,9 @@ ul.inline {
 .nav-collapse:before,
 .nav-collapse:after,
 .accordion-inner:before,
-.accordion-inner:after {
+.accordion-inner:after,
+.controls-row:before,
+.controls-row:after {
   content: " ";
   display: table;
 }
@@ -1038,7 +1058,8 @@ ul.inline {
 .modal-footer:after,
 .row-fluid:after,
 .nav-collapse:after,
-.accordion-inner:after {
+.accordion-inner:after,
+.controls-row:after {
   clear: both;
 }
 .visible-phone,
@@ -1163,4 +1184,83 @@ ul.inline {
 }
 .offset0 {
   margin-left: 0%;
+}
+.input-mini {
+  width: 60px;
+}
+.input-small {
+  width: 90px;
+}
+.input-medium {
+  width: 150px;
+}
+.input-large {
+  width: 210px;
+}
+.input-xlarge {
+  width: 270px;
+}
+.input-xxlarge {
+  width: 530px;
+}
+.form-actions {
+  padding: 19px 20px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e5e5e5;
+  *zoom: 1;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.btn-inverse {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #363636;
+  background-image: -moz-linear-gradient(top, #444444, #222222);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444444), to(#222222));
+  background-image: -webkit-linear-gradient(top, #444444, #222222);
+  background-image: -o-linear-gradient(top, #444444, #222222);
+  background-image: linear-gradient(to bottom, #444444, #222222);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
+  border-color: #222222 #222222 #000000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #222222;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.nav-list,
+.nav-header,
+.nav-header {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 0;
+}
+.navbar-inner {
+  min-height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fafafa;
+  background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
+  background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
+  background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
+  background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
+  border: 1px solid #d4d4d4;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  *zoom: 1;
+}
+.navbar .divider-vertical {
+  height: 40px;
+  margin: 0 9px;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #ffffff;
 }

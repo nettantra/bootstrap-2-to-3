@@ -51,7 +51,6 @@ ul.inline:extend(.list-inline) {}
 .label-important:extend(.label-danger) {}
 .text-error:extend(.text-danger) {}
 .table .error:extend(.table .danger) {}
-.bar:extend(.progress-bar) {}
 .accordion:extend(.panel-group) {}
 .accordion-group:extend(.panel .panel-default) {}
 .accordion-heading:extend(.panel-heading) {}
@@ -63,7 +62,22 @@ ul.inline:extend(.list-inline) {}
 .control-group.success:extend(.form-group.has-success) {}
 
 .bar:extend(.progress-bar) {}
+.progress-striped:extend(.progress-bar-striped) {}
 .bar-success:extend(.progress-bar-success) {}
 .bar-info:extend(.progress-bar-info) {}
 .bar-warning:extend(.progress-bar-warning) {}
 .bar-danger:extend(.progress-bar-danger) {}
+
+// bootstrap-2-to-3-removed-compatible classes
+.controls-row:extend(.row all) {}
+.pill-content:extend(.tab-content) {}
+.pill-pane:extend(.tab-pane) {}
+.help-inline:extend(.help-block) {}
+
+.progress-info:extend(.progress-bar-info) {}
+.progress-success:extend(.progress-bar-success) {}
+.progress-warning:extend(.progress-bar-warning) {}
+.progress-info:danger(.progress-bar-danger) {}
+
+// bootstrap-3 removed classes
+@import (less) "../dist/tmp/bootstrap-2-to-3-removed.css";

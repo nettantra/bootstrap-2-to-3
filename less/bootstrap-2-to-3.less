@@ -5,8 +5,9 @@
 }
 .bs-23-make-grid-columns();
 
-.bs-23-make-grid("md");
-
+@media (min-width: @screen-md-min) {
+  .bs-23-make-grid(md);
+}
 .navbar .nav:extend(.navbar-nav all) {}
 .nav-collapse:extend(.navbar-collapse all) {}
 .nav-toggle:extend(.navbar-toggle all) {}
@@ -83,7 +84,7 @@ ul.inline:extend(.list-inline all) {}
 .progress-warning:extend(.progress-bar-warning all) {}
 .progress-info:danger(.progress-bar-danger all) {}
 
-// class to make image responsive on bootstrap 3
+// class to make image responsive
 img {
   &:extend(.img-responsive all);
   display: inline-block;

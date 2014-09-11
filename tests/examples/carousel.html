@@ -198,14 +198,21 @@
       .featurette-image.pull-left,
       .featurette-image.pull-right {
         display: block;
-        float: none;
+        float: none !important;
         max-width: 40%;
         margin: 0 auto 20px;
       }
     }
 
-
     @media (max-width: 767px) {
+      .navbar-wrapper {
+        margin-top: 0;
+      }
+
+      .container {
+        padding-left: 0;
+        padding-right: 0;
+      }
 
       .carousel {
         margin-left: -20px;

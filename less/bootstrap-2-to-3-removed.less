@@ -12,36 +12,29 @@
 .input-xxlarge:extend(.input-xxlarge all) {}
 .btn-inverse:extend(.btn-inverse all) {}
 .controls:extend(.controls all) {}
-.navbar-inner:extend(.navbar-inner all) {}
-.navbar .divider-vertical:extend(.navbar .divider-vertical all) {}
 .dropdown-submenu:extend(.dropdown-submenu all) {}
 .tabs-left:extend(.tabs-left all) {}
 .tabs-right:extend(.tabs-right all) {}
 .tabs-below:extend(.tabs-below all) {}
 .nav-list:extend(.nav-list all) {}
 .nav-header:extend(.nav-header all) {}
-.navbar .btn-navbar:extend(.navbar .btn-navbar all) {}
-.navbar-inverse .btn-navbar:extend(.navbar-inverse .btn-navbar all) {}
-.navbar .btn-navbar .icon-bar:extend(.navbar .btn-navbar .icon-bar all) {}
+.brand:extend(.brand all) {}
+.carousel-control:extend(.carousel-control all) {}
+.navbar-inverse:extend(.navbar-inverse all) {}
+.uneditable-input[class*="span"]:extend(.uneditable-input[class*="span"] all) {}
+.navbar-inner:extend(.navbar-inner all) {}
+
 [class^="icon-"]:extend([class^="icon-"] all) {}
 [class*=" icon-"]:extend([class*=" icon-"] all) {}
-.navbar-inverse .nav .active > a:extend(.navbar-inverse .nav .active > a all) {}
-.navbar-inverse .nav .active > a:hover:extend(.navbar-inverse .nav .active > a:hover all) {}
-.navbar-inverse .nav .active > a:focus:extend(.navbar-inverse .nav .active > a:focus all) {}
-.navbar-inverse .brand:extend(.navbar-inverse .brand all) {}
-.navbar-inverse .nav > li > a:extend(.navbar-inverse .nav > li > a all) {}
-.brand:extend(.brand all) {}
-.navbar-inverse .nav li.dropdown.open > .dropdown-toggle:extend(.navbar-inverse .nav li.dropdown.open > .dropdown-toggle all) {}
-.navbar-inverse .nav li.dropdown.active > .dropdown-toggle:extend(.navbar-inverse .nav li.dropdown.active > .dropdown-toggle all) {}
-.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle:extend(.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle all) {}
-.navbar .nav > li > .dropdown-menu:before:extend(.navbar .nav > li > .dropdown-menu:before all) {}
-.navbar .nav > li > .dropdown-menu:after:extend(.navbar .nav > li > .dropdown-menu:after all) {}
-.carousel-control:extend(.carousel-control all) {}
 input[class*="span"]:extend(input[class*="span"] all) {}
 select[class*="span"]:extend(select[class*="span"] all) {}
 textarea[class*="span"]:extend(textarea[class*="span"] all) {}
-.uneditable-input[class*="span"]:extend(.uneditable-input[class*="span"] all) {}
-.navbar .nav > .active > a:extend(.navbar .nav > .active > a all) {}
-.navbar .nav > .active > a:hover:extend(.navbar .nav > .active > a:hover all) {}
-.navbar .nav > .active > a:focus:extend(.navbar .nav > .active > a:focus all) {}
-.navbar .nav > li > a:extend(.navbar .nav > li > a all) {}
+
+@media (max-width: 979px) {
+  .navbar .brand {
+    margin: 0 0 0 -5px;
+  }
+  .nav-collapse {
+    clear: both;
+  }
+}

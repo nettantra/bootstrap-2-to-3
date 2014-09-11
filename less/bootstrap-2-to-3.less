@@ -83,5 +83,10 @@ ul.inline:extend(.list-inline all) {}
 .progress-warning:extend(.progress-bar-warning all) {}
 .progress-info:danger(.progress-bar-danger all) {}
 
+// class to make image responsive on bootstrap 3
+img {
+  &:extend(.img-responsive all);
+}
+
 // bootstrap-3 removed classes
 @import (less) "../dist/tmp/bootstrap-2-to-3-removed.css";

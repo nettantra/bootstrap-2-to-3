@@ -1959,6 +1959,9 @@ select[multiple].input-group-sm > .add-on {
 .offset0 {
   margin-left: 0%;
 }
+img {
+  display: inline-block;
+}
 .controls > .radio:first-child,
 .controls > .checkbox:first-child {
   padding-top: 5px;

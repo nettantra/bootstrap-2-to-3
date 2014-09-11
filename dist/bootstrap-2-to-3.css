@@ -2423,6 +2423,9 @@ textarea[class*="span"],
 .navbar-inner:after {
   clear: both;
 }
+.navbar .container {
+  width: auto;
+}
 .navbar .brand {
   float: left;
   display: block;
@@ -2648,6 +2651,10 @@ textarea[class*="span"],
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
+.navbar .container {
+  padding-left: 0;
+  padding-right: 0;
+}
 @media (max-width: 979px) {
   .navbar .brand,
   .navbar .brand {
@@ -2659,4 +2666,8 @@ textarea[class*="span"],
 }
 .navbar .nav > li > a {
   color: #777777;
+}
+ul.nav:before,
+ul.nav:after {
+  display: none;
 }

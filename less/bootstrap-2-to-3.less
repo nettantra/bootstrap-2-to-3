@@ -72,7 +72,8 @@ ul.inline:extend(.list-inline all) {}
 .bar-info:extend(.progress-bar-info all) {}
 .bar-warning:extend(.progress-bar-warning all) {}
 .bar-danger:extend(.progress-bar-danger all) {}
-.btn-navbar:extend(.navbar-toggle all) {}
+.btn-navbar:extend(.navbar-default .navbar-toggle, .navbar-toggle all) {}
+.btn-navbar .icon-bar:extend(.navbar-toggle .icon-bar,.navbar-default .navbar-toggle .icon-bar all) {}
 
 // bootstrap-2-to-3-removed-compatible classes
 .controls-row:extend(.row all) {}

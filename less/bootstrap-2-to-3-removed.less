@@ -23,9 +23,8 @@
 .navbar-inverse:extend(.navbar-inverse all) {}
 .uneditable-input[class*="span"]:extend(.uneditable-input[class*="span"] all) {}
 .navbar-inner:extend(.navbar-inner all) {}
+.navbar .nav > .active:extend(.navbar .nav > .active all) {}
 
-[class^="icon-"]:extend([class^="icon-"] all) {}
-[class*=" icon-"]:extend([class*=" icon-"] all) {}
 input[class*="span"]:extend(input[class*="span"] all) {}
 select[class*="span"]:extend(select[class*="span"] all) {}
 textarea[class*="span"]:extend(textarea[class*="span"] all) {}
@@ -37,4 +36,7 @@ textarea[class*="span"]:extend(textarea[class*="span"] all) {}
   .nav-collapse {
     clear: both;
   }
+}
+.navbar .nav > li > a {
+  color: @navbarLinkColor;
 }

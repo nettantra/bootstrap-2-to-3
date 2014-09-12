@@ -5,11 +5,11 @@
 .form-search:extend(.form-search all) {}
 .control-group.info:extend(.control-group.info all) {}
 .input-mini:extend(.input-mini all) {}
-.input-small:extend(.input-small all) {}
 .input-medium:extend(.input-medium all) {}
 .input-large:extend(.input-large all) {}
 .input-xlarge:extend(.input-xlarge all) {}
 .input-xxlarge:extend(.input-xxlarge all) {}
+input.search-query:extend(input.search-query all) {}
 .btn-inverse:extend(.btn-inverse all) {}
 .controls:extend(.controls all) {}
 .dropdown-submenu:extend(.dropdown-submenu all) {}
@@ -24,14 +24,35 @@
 .uneditable-input[class*="span"]:extend(.uneditable-input[class*="span"] all) {}
 .navbar-inner:extend(.navbar-inner all) {}
 .navbar .nav > .active:extend(.navbar .nav > .active all) {}
+
+.form-search input:extend(.form-search input) {}
+.form-inline input:extend(.form-inline input) {}
+.form-horizontal input:extend(.form-horizontal input) {}
+.form-search textarea:extend(.form-search textarea) {}
+.form-inline textarea:extend(.form-inline textarea) {}
+.form-horizontal textarea:extend(.form-horizontal textarea) {}
+.form-search select:extend(.form-search select) {}
+.form-inline select:extend(.form-inline select) {}
+.form-horizontal select:extend(.form-horizontal select) {}
+.form-search .help-inline:extend(.form-search .help-inline) {}
+.form-inline .help-inline:extend(.form-inline .help-inline) {}
+.form-horizontal .help-inline:extend(.form-horizontal .help-inline) {}
+.form-search .uneditable-input:extend(.form-search .uneditable-input) {}
+.form-inline .uneditable-input:extend(.form-inline .uneditable-input) {}
+.form-horizontal .uneditable-input:extend(.form-horizontal .uneditable-input) {}
+.form-search .input-prepend:extend(.form-search .input-prepend) {}
+.form-inline .input-prepend:extend(.form-inline .input-prepend) {}
+.form-horizontal .input-prepend:extend(.form-horizontal .input-prepend) {}
+.form-search .input-append:extend(.form-search .input-append) {}
+.form-inline .input-append:extend(.form-inline .input-append) {}
+.form-horizontal .input-append:extend(.form-horizontal .input-append) {}
+.label-inverse:extend(.label-inverse) {}
+.badge-inverse:extend(.badge-inverse) {}
+
 .navbar .container:extend(.navbar .container) {
   padding-left: 0;
   padding-right: 0;
 }
-
-input[class*="span"]:extend(input[class*="span"] all) {}
-select[class*="span"]:extend(select[class*="span"] all) {}
-textarea[class*="span"]:extend(textarea[class*="span"] all) {}
 
 @media (max-width: 979px) {
   .navbar .brand {

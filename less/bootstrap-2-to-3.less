@@ -43,8 +43,6 @@
 .hidden-desktop:extend(.hidden-md all) {}
 .input-block-level:extend(.form-control all) {}
 .control-group:extend(.form-group all) {}
-.checkbox.inline:extend(.checkbox-inline all) {}
-.radio.inline:extend(.radio-inline all) {}
 .input-append:extend(.input-group all) {}
 .input-prepend:extend(.input-group all) {}
 .add-on:extend(.input-group-addon all) {}
@@ -52,7 +50,6 @@
 ul.unstyled:extend(.list-unstyled all) {}
 ul.inline:extend(.list-inline all) {}
 .muted:extend(.text-muted all) {}
-.label:extend(.label-default all) {}
 .label-important:extend(.label-danger all) {}
 .text-error:extend(.text-danger all) {}
 .table .error:extend(.table .danger all) {}
@@ -62,9 +59,9 @@ ul.inline:extend(.list-inline all) {}
 .accordion-body:extend(.panel-collapse all) {}
 .accordion-inner:extend(.panel-body all) {}
 
-.control-group.warning:extend(.form-group.has-warning all) {}
-.control-group.error:extend(.form-group.has-error all) {}
-.control-group.success:extend(.form-group.has-success all) {}
+.control-group.warning:extend(.has-warning all) {}
+.control-group.error:extend(.has-error all) {}
+.control-group.success:extend(.has-success all) {}
 
 .bar:extend(.progress-bar all) {}
 .progress-striped:extend(.progress-bar-striped all) {}
@@ -75,16 +72,29 @@ ul.inline:extend(.list-inline all) {}
 .btn-navbar:extend(.navbar-default .navbar-toggle, .navbar-toggle all) {}
 .btn-navbar .icon-bar:extend(.navbar-toggle .icon-bar,.navbar-default .navbar-toggle .icon-bar all) {}
 
+.radio.inline:extend(.radio-inline all) {}
+.checkbox.inline:extend(.checkbox-inline all) {}
+
 // bootstrap-2-to-3-removed-compatible classes
 .controls-row:extend(.row all) {}
 .pill-content:extend(.tab-content all) {}
 .pill-pane:extend(.tab-pane all) {}
 .help-inline:extend(.help-block all) {}
+.pagination ul:extend(.pagination all) {}
 
 .progress-info:extend(.progress-bar-info all) {}
 .progress-success:extend(.progress-bar-success all) {}
 .progress-warning:extend(.progress-bar-warning all) {}
 .progress-info:danger(.progress-bar-danger all) {}
+
+input[type="color"]:extend(.form-control all) {}
+input[type="email"]:extend(.form-control all) {}
+input[type="number"]:extend(.form-control all) {}
+input[type="password"]:extend(.form-control all) {}
+input[type="tel"]:extend(.form-control all) {}
+input[type="url"]:extend(.form-control all) {}
+input[type="text"]:extend(.form-control all) {}
+select:extend(.form-control all) {}
 
 // class to make image responsive
 img {

@@ -480,7 +480,15 @@ ul.inline > li {
   margin-left: -15px;
   margin-right: -15px;
 }
-.input-block-level {
+.input-block-level,
+input[type="color"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+select {
   display: block;
   width: 100%;
   height: 34px;
@@ -498,43 +506,107 @@ ul.inline > li {
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-.input-block-level:focus {
+.input-block-level:focus,
+input[type="color"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="text"]:focus,
+select:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-.input-block-level::-moz-placeholder {
+.input-block-level::-moz-placeholder,
+input[type="color"]::-moz-placeholder,
+input[type="email"]::-moz-placeholder,
+input[type="number"]::-moz-placeholder,
+input[type="password"]::-moz-placeholder,
+input[type="tel"]::-moz-placeholder,
+input[type="url"]::-moz-placeholder,
+input[type="text"]::-moz-placeholder,
+select::-moz-placeholder {
   color: #777777;
   opacity: 1;
 }
-.input-block-level:-ms-input-placeholder {
+.input-block-level:-ms-input-placeholder,
+input[type="color"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="number"]:-ms-input-placeholder,
+input[type="password"]:-ms-input-placeholder,
+input[type="tel"]:-ms-input-placeholder,
+input[type="url"]:-ms-input-placeholder,
+input[type="text"]:-ms-input-placeholder,
+select:-ms-input-placeholder {
   color: #777777;
 }
-.input-block-level::-webkit-input-placeholder {
+.input-block-level::-webkit-input-placeholder,
+input[type="color"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+input[type="number"]::-webkit-input-placeholder,
+input[type="password"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder,
+input[type="url"]::-webkit-input-placeholder,
+input[type="text"]::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
   color: #777777;
 }
 .input-block-level[disabled],
 .input-block-level[readonly],
-fieldset[disabled] .input-block-level {
+fieldset[disabled] .input-block-level,
+input[type="color"][disabled],
+input[type="color"][readonly],
+fieldset[disabled] input[type="color"],
+input[type="email"][disabled],
+input[type="email"][readonly],
+fieldset[disabled] input[type="email"],
+input[type="number"][disabled],
+input[type="number"][readonly],
+fieldset[disabled] input[type="number"],
+input[type="password"][disabled],
+input[type="password"][readonly],
+fieldset[disabled] input[type="password"],
+input[type="tel"][disabled],
+input[type="tel"][readonly],
+fieldset[disabled] input[type="tel"],
+input[type="url"][disabled],
+input[type="url"][readonly],
+fieldset[disabled] input[type="url"],
+input[type="text"][disabled],
+input[type="text"][readonly],
+fieldset[disabled] input[type="text"],
+select[disabled],
+select[readonly],
+fieldset[disabled] select {
   cursor: not-allowed;
   background-color: #eeeeee;
   opacity: 1;
 }
-textarea.input-block-level {
+textarea.input-block-level,
+textareainput[type="color"],
+textareainput[type="email"],
+textareainput[type="number"],
+textareainput[type="password"],
+textareainput[type="tel"],
+textareainput[type="url"],
+textareainput[type="text"],
+textareaselect {
   height: auto;
 }
 .control-group {
   margin-bottom: 15px;
 }
-.checkbox.inline input[type="checkbox"],
-.radio.inline input[type="radio"] {
+.radio.inline input[type="radio"],
+.checkbox.inline input[type="checkbox"] {
   position: absolute;
   margin-left: -20px;
   margin-top: 4px \9;
 }
-.checkbox.inline,
-.radio.inline {
+.radio.inline,
+.checkbox.inline {
   display: inline-block;
   padding-left: 20px;
   margin-bottom: 0;
@@ -542,19 +614,27 @@ textarea.input-block-level {
   font-weight: normal;
   cursor: pointer;
 }
-.checkbox.inline + .checkbox.inline,
-.radio.inline + .radio.inline {
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
   margin-top: 0;
   margin-left: 10px;
 }
-.checkbox.inline.disabled,
-fieldset[disabled] .checkbox.inline,
 .radio.inline.disabled,
-fieldset[disabled] .radio.inline {
+fieldset[disabled] .radio.inline,
+.checkbox.inline.disabled,
+fieldset[disabled] .checkbox.inline {
   cursor: not-allowed;
 }
 .form-horizontal .form-group-sm .form-control,
-.form-horizontal .form-group-sm .input-block-level {
+.form-horizontal .form-group-sm .input-block-level,
+.form-horizontal .form-group-sm input[type="color"],
+.form-horizontal .form-group-sm input[type="email"],
+.form-horizontal .form-group-sm input[type="number"],
+.form-horizontal .form-group-sm input[type="password"],
+.form-horizontal .form-group-sm input[type="tel"],
+.form-horizontal .form-group-sm input[type="url"],
+.form-horizontal .form-group-sm input[type="text"],
+.form-horizontal .form-group-sm select {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -562,75 +642,175 @@ fieldset[disabled] .radio.inline {
   border-radius: 3px;
 }
 .form-horizontal .form-group-lg .form-control,
-.form-horizontal .form-group-lg .input-block-level {
+.form-horizontal .form-group-lg .input-block-level,
+.form-horizontal .form-group-lg input[type="color"],
+.form-horizontal .form-group-lg input[type="email"],
+.form-horizontal .form-group-lg input[type="number"],
+.form-horizontal .form-group-lg input[type="password"],
+.form-horizontal .form-group-lg input[type="tel"],
+.form-horizontal .form-group-lg input[type="url"],
+.form-horizontal .form-group-lg input[type="text"],
+.form-horizontal .form-group-lg select {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
 }
-.has-feedback .input-block-level {
+.has-feedback .input-block-level,
+.has-feedback input[type="color"],
+.has-feedback input[type="email"],
+.has-feedback input[type="number"],
+.has-feedback input[type="password"],
+.has-feedback input[type="tel"],
+.has-feedback input[type="url"],
+.has-feedback input[type="text"],
+.has-feedback select {
   padding-right: 42.5px;
 }
-.has-success .checkbox.inline,
+.control-group.success .help-block,
+.control-group.success .control-label,
+.control-group.success .radio,
+.control-group.success .checkbox,
+.control-group.success .radio-inline,
+.control-group.success .checkbox-inline,
 .has-success .radio.inline,
+.has-success .checkbox.inline,
 .has-success .help-inline {
   color: #3c763d;
 }
-.has-success .input-block-level {
+.has-success .input-block-level,
+.control-group.success .form-control,
+.has-success input[type="color"],
+.has-success input[type="email"],
+.has-success input[type="number"],
+.has-success input[type="password"],
+.has-success input[type="tel"],
+.has-success input[type="url"],
+.has-success input[type="text"],
+.has-success select {
   border-color: #3c763d;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-.has-success .input-block-level:focus {
+.has-success .input-block-level:focus,
+.control-group.success .form-control:focus,
+.has-success input[type="color"]:focus,
+.has-success input[type="email"]:focus,
+.has-success input[type="number"]:focus,
+.has-success input[type="password"]:focus,
+.has-success input[type="tel"]:focus,
+.has-success input[type="url"]:focus,
+.has-success input[type="text"]:focus,
+.has-success select:focus {
   border-color: #2b542c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
 }
-.has-success .add-on {
+.has-success .add-on,
+.control-group.success .input-group-addon {
   color: #3c763d;
   border-color: #3c763d;
   background-color: #dff0d8;
 }
-.has-warning .checkbox.inline,
+.control-group.success .form-control-feedback {
+  color: #3c763d;
+}
+.control-group.warning .help-block,
+.control-group.warning .control-label,
+.control-group.warning .radio,
+.control-group.warning .checkbox,
+.control-group.warning .radio-inline,
+.control-group.warning .checkbox-inline,
 .has-warning .radio.inline,
+.has-warning .checkbox.inline,
 .has-warning .help-inline {
   color: #8a6d3b;
 }
-.has-warning .input-block-level {
+.has-warning .input-block-level,
+.control-group.warning .form-control,
+.has-warning input[type="color"],
+.has-warning input[type="email"],
+.has-warning input[type="number"],
+.has-warning input[type="password"],
+.has-warning input[type="tel"],
+.has-warning input[type="url"],
+.has-warning input[type="text"],
+.has-warning select {
   border-color: #8a6d3b;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-.has-warning .input-block-level:focus {
+.has-warning .input-block-level:focus,
+.control-group.warning .form-control:focus,
+.has-warning input[type="color"]:focus,
+.has-warning input[type="email"]:focus,
+.has-warning input[type="number"]:focus,
+.has-warning input[type="password"]:focus,
+.has-warning input[type="tel"]:focus,
+.has-warning input[type="url"]:focus,
+.has-warning input[type="text"]:focus,
+.has-warning select:focus {
   border-color: #66512c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
 }
-.has-warning .add-on {
+.has-warning .add-on,
+.control-group.warning .input-group-addon {
   color: #8a6d3b;
   border-color: #8a6d3b;
   background-color: #fcf8e3;
 }
-.has-error .checkbox.inline,
+.control-group.warning .form-control-feedback {
+  color: #8a6d3b;
+}
+.control-group.error .help-block,
+.control-group.error .control-label,
+.control-group.error .radio,
+.control-group.error .checkbox,
+.control-group.error .radio-inline,
+.control-group.error .checkbox-inline,
 .has-error .radio.inline,
+.has-error .checkbox.inline,
 .has-error .help-inline {
   color: #a94442;
 }
-.has-error .input-block-level {
+.has-error .input-block-level,
+.control-group.error .form-control,
+.has-error input[type="color"],
+.has-error input[type="email"],
+.has-error input[type="number"],
+.has-error input[type="password"],
+.has-error input[type="tel"],
+.has-error input[type="url"],
+.has-error input[type="text"],
+.has-error select {
   border-color: #a94442;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-.has-error .input-block-level:focus {
+.has-error .input-block-level:focus,
+.control-group.error .form-control:focus,
+.has-error input[type="color"]:focus,
+.has-error input[type="email"]:focus,
+.has-error input[type="number"]:focus,
+.has-error input[type="password"]:focus,
+.has-error input[type="tel"]:focus,
+.has-error input[type="url"]:focus,
+.has-error input[type="text"]:focus,
+.has-error select:focus {
   border-color: #843534;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
 }
-.has-error .add-on {
+.has-error .add-on,
+.control-group.error .input-group-addon {
   color: #a94442;
   border-color: #a94442;
   background-color: #f2dede;
+}
+.control-group.error .form-control-feedback {
+  color: #a94442;
 }
 .help-inline {
   display: block;
@@ -644,7 +824,15 @@ fieldset[disabled] .radio.inline {
     margin-bottom: 0;
     vertical-align: middle;
   }
-  .form-inline .input-block-level {
+  .form-inline .input-block-level,
+  .form-inline input[type="color"],
+  .form-inline input[type="email"],
+  .form-inline input[type="number"],
+  .form-inline input[type="password"],
+  .form-inline input[type="tel"],
+  .form-inline input[type="url"],
+  .form-inline input[type="text"],
+  .form-inline select {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -661,17 +849,33 @@ fieldset[disabled] .radio.inline {
   .form-inline .input-prepend .input-group-addon,
   .form-inline .input-prepend .input-group-btn,
   .form-inline .input-prepend .form-control,
-  .form-inline .input-group .add-on {
+  .form-inline .input-group .add-on,
+  .form-inline .input-group input[type="color"],
+  .form-inline .input-group input[type="email"],
+  .form-inline .input-group input[type="number"],
+  .form-inline .input-group input[type="password"],
+  .form-inline .input-group input[type="tel"],
+  .form-inline .input-group input[type="url"],
+  .form-inline .input-group input[type="text"],
+  .form-inline .input-group select {
     width: auto;
   }
   .form-inline .input-group > .input-block-level,
   .form-inline .input-append > .form-control,
-  .form-inline .input-prepend > .form-control {
+  .form-inline .input-prepend > .form-control,
+  .form-inline .input-group > input[type="color"],
+  .form-inline .input-group > input[type="email"],
+  .form-inline .input-group > input[type="number"],
+  .form-inline .input-group > input[type="password"],
+  .form-inline .input-group > input[type="tel"],
+  .form-inline .input-group > input[type="url"],
+  .form-inline .input-group > input[type="text"],
+  .form-inline .input-group > select {
     width: 100%;
   }
 }
-.form-horizontal .checkbox.inline,
-.form-horizontal .radio.inline {
+.form-horizontal .radio.inline,
+.form-horizontal .checkbox.inline {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 7px;
@@ -980,7 +1184,15 @@ fieldset[disabled] .btn-danger.active {
 }
 .input-group .input-block-level,
 .input-append .form-control,
-.input-prepend .form-control {
+.input-prepend .form-control,
+.input-group input[type="color"],
+.input-group input[type="email"],
+.input-group input[type="number"],
+.input-group input[type="password"],
+.input-group input[type="tel"],
+.input-group input[type="url"],
+.input-group input[type="text"],
+.input-group select {
   position: relative;
   z-index: 2;
   float: left;
@@ -988,7 +1200,15 @@ fieldset[disabled] .btn-danger.active {
   margin-bottom: 0;
 }
 .input-group-lg > .input-block-level,
-.input-group-lg > .add-on {
+.input-group-lg > .add-on,
+.input-group-lg > input[type="color"],
+.input-group-lg > input[type="email"],
+.input-group-lg > input[type="number"],
+.input-group-lg > input[type="password"],
+.input-group-lg > input[type="tel"],
+.input-group-lg > input[type="url"],
+.input-group-lg > input[type="text"],
+.input-group-lg > select {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -996,18 +1216,50 @@ fieldset[disabled] .btn-danger.active {
   border-radius: 6px;
 }
 select.input-group-lg > .input-block-level,
-select.input-group-lg > .add-on {
+select.input-group-lg > .add-on,
+select.input-group-lg > input[type="color"],
+select.input-group-lg > input[type="email"],
+select.input-group-lg > input[type="number"],
+select.input-group-lg > input[type="password"],
+select.input-group-lg > input[type="tel"],
+select.input-group-lg > input[type="url"],
+select.input-group-lg > input[type="text"],
+select.input-group-lg > select {
   height: 46px;
   line-height: 46px;
 }
 textarea.input-group-lg > .input-block-level,
 select[multiple].input-group-lg > .input-block-level,
 textarea.input-group-lg > .add-on,
-select[multiple].input-group-lg > .add-on {
+select[multiple].input-group-lg > .add-on,
+textarea.input-group-lg > input[type="color"],
+select[multiple].input-group-lg > input[type="color"],
+textarea.input-group-lg > input[type="email"],
+select[multiple].input-group-lg > input[type="email"],
+textarea.input-group-lg > input[type="number"],
+select[multiple].input-group-lg > input[type="number"],
+textarea.input-group-lg > input[type="password"],
+select[multiple].input-group-lg > input[type="password"],
+textarea.input-group-lg > input[type="tel"],
+select[multiple].input-group-lg > input[type="tel"],
+textarea.input-group-lg > input[type="url"],
+select[multiple].input-group-lg > input[type="url"],
+textarea.input-group-lg > input[type="text"],
+select[multiple].input-group-lg > input[type="text"],
+textarea.input-group-lg > select,
+select[multiple].input-group-lg > select {
   height: auto;
 }
 .input-group-sm > .input-block-level,
-.input-group-sm > .add-on {
+.input-group-sm > .add-on,
+.input-group-sm > input[type="color"],
+.input-group-sm > input[type="email"],
+.input-group-sm > input[type="number"],
+.input-group-sm > input[type="password"],
+.input-group-sm > input[type="tel"],
+.input-group-sm > input[type="url"],
+.input-group-sm > input[type="text"],
+.input-group-sm > select {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -1015,26 +1267,66 @@ select[multiple].input-group-lg > .add-on {
   border-radius: 3px;
 }
 select.input-group-sm > .input-block-level,
-select.input-group-sm > .add-on {
+select.input-group-sm > .add-on,
+select.input-group-sm > input[type="color"],
+select.input-group-sm > input[type="email"],
+select.input-group-sm > input[type="number"],
+select.input-group-sm > input[type="password"],
+select.input-group-sm > input[type="tel"],
+select.input-group-sm > input[type="url"],
+select.input-group-sm > input[type="text"],
+select.input-group-sm > select {
   height: 30px;
   line-height: 30px;
 }
 textarea.input-group-sm > .input-block-level,
 select[multiple].input-group-sm > .input-block-level,
 textarea.input-group-sm > .add-on,
-select[multiple].input-group-sm > .add-on {
+select[multiple].input-group-sm > .add-on,
+textarea.input-group-sm > input[type="color"],
+select[multiple].input-group-sm > input[type="color"],
+textarea.input-group-sm > input[type="email"],
+select[multiple].input-group-sm > input[type="email"],
+textarea.input-group-sm > input[type="number"],
+select[multiple].input-group-sm > input[type="number"],
+textarea.input-group-sm > input[type="password"],
+select[multiple].input-group-sm > input[type="password"],
+textarea.input-group-sm > input[type="tel"],
+select[multiple].input-group-sm > input[type="tel"],
+textarea.input-group-sm > input[type="url"],
+select[multiple].input-group-sm > input[type="url"],
+textarea.input-group-sm > input[type="text"],
+select[multiple].input-group-sm > input[type="text"],
+textarea.input-group-sm > select,
+select[multiple].input-group-sm > select {
   height: auto;
 }
 .input-group .input-block-level,
 .input-append .form-control,
 .input-prepend .form-control,
-.add-on {
+.add-on,
+.input-group input[type="color"],
+.input-group input[type="email"],
+.input-group input[type="number"],
+.input-group input[type="password"],
+.input-group input[type="tel"],
+.input-group input[type="url"],
+.input-group input[type="text"],
+.input-group select {
   display: table-cell;
 }
 .input-group .input-block-level:not(:first-child):not(:last-child),
 .input-append .form-control:not(:first-child):not(:last-child),
 .input-prepend .form-control:not(:first-child):not(:last-child),
-.add-on:not(:first-child):not(:last-child) {
+.add-on:not(:first-child):not(:last-child),
+.input-group input[type="color"]:not(:first-child):not(:last-child),
+.input-group input[type="email"]:not(:first-child):not(:last-child),
+.input-group input[type="number"]:not(:first-child):not(:last-child),
+.input-group input[type="password"]:not(:first-child):not(:last-child),
+.input-group input[type="tel"]:not(:first-child):not(:last-child),
+.input-group input[type="url"]:not(:first-child):not(:last-child),
+.input-group input[type="text"]:not(:first-child):not(:last-child),
+.input-group select:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 .add-on {
@@ -1070,7 +1362,15 @@ select[multiple].input-group-sm > .add-on {
 .input-group .input-block-level:first-child,
 .input-append .form-control:first-child,
 .input-prepend .form-control:first-child,
-.add-on:first-child {
+.add-on:first-child,
+.input-group input[type="color"]:first-child,
+.input-group input[type="email"]:first-child,
+.input-group input[type="number"]:first-child,
+.input-group input[type="password"]:first-child,
+.input-group input[type="tel"]:first-child,
+.input-group input[type="url"]:first-child,
+.input-group input[type="text"]:first-child,
+.input-group select:first-child {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -1080,7 +1380,15 @@ select[multiple].input-group-sm > .add-on {
 .input-group .input-block-level:last-child,
 .input-append .form-control:last-child,
 .input-prepend .form-control:last-child,
-.add-on:last-child {
+.add-on:last-child,
+.input-group input[type="color"]:last-child,
+.input-group input[type="email"]:last-child,
+.input-group input[type="number"]:last-child,
+.input-group input[type="password"]:last-child,
+.input-group input[type="tel"]:last-child,
+.input-group input[type="url"]:last-child,
+.input-group input[type="text"]:last-child,
+.input-group select:last-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -1236,7 +1544,15 @@ select[multiple].input-group-sm > .add-on {
     margin-bottom: 0;
     vertical-align: middle;
   }
-  .navbar-form .input-block-level {
+  .navbar-form .input-block-level,
+  .navbar-form input[type="color"],
+  .navbar-form input[type="email"],
+  .navbar-form input[type="number"],
+  .navbar-form input[type="password"],
+  .navbar-form input[type="tel"],
+  .navbar-form input[type="url"],
+  .navbar-form input[type="text"],
+  .navbar-form select {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -1253,12 +1569,28 @@ select[multiple].input-group-sm > .add-on {
   .navbar-form .input-prepend .input-group-addon,
   .navbar-form .input-prepend .input-group-btn,
   .navbar-form .input-prepend .form-control,
-  .navbar-form .input-group .add-on {
+  .navbar-form .input-group .add-on,
+  .navbar-form .input-group input[type="color"],
+  .navbar-form .input-group input[type="email"],
+  .navbar-form .input-group input[type="number"],
+  .navbar-form .input-group input[type="password"],
+  .navbar-form .input-group input[type="tel"],
+  .navbar-form .input-group input[type="url"],
+  .navbar-form .input-group input[type="text"],
+  .navbar-form .input-group select {
     width: auto;
   }
   .navbar-form .input-group > .input-block-level,
   .navbar-form .input-append > .form-control,
-  .navbar-form .input-prepend > .form-control {
+  .navbar-form .input-prepend > .form-control,
+  .navbar-form .input-group > input[type="color"],
+  .navbar-form .input-group > input[type="email"],
+  .navbar-form .input-group > input[type="number"],
+  .navbar-form .input-group > input[type="password"],
+  .navbar-form .input-group > input[type="tel"],
+  .navbar-form .input-group > input[type="url"],
+  .navbar-form .input-group > input[type="text"],
+  .navbar-form .input-group > select {
     width: 100%;
   }
 }
@@ -1428,12 +1760,68 @@ select[multiple].input-group-sm > .add-on {
     background-color: transparent;
   }
 }
-.label {
-  background-color: #777777;
+.pagination ul {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
 }
-.label[href]:hover,
-.label[href]:focus {
-  background-color: #5e5e5e;
+.pagination ul > li {
+  display: inline;
+}
+.pagination ul > li > a,
+.pagination ul > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  text-decoration: none;
+  color: #428bca;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  margin-left: -1px;
+}
+.pagination ul > li:first-child > a,
+.pagination ul > li:first-child > span {
+  margin-left: 0;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.pagination ul > li:last-child > a,
+.pagination ul > li:last-child > span {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.pagination ul > li > a:hover,
+.pagination ul > li > span:hover,
+.pagination ul > li > a:focus,
+.pagination ul > li > span:focus {
+  color: #2a6496;
+  background-color: #eeeeee;
+  border-color: #dddddd;
+}
+.pagination ul > .active > a,
+.pagination ul > .active > span,
+.pagination ul > .active > a:hover,
+.pagination ul > .active > span:hover,
+.pagination ul > .active > a:focus,
+.pagination ul > .active > span:focus {
+  z-index: 2;
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #428bca;
+  cursor: default;
+}
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > span:hover,
+.pagination ul > .disabled > span:focus,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover,
+.pagination ul > .disabled > a:focus {
+  color: #777777;
+  background-color: #ffffff;
+  border-color: #dddddd;
+  cursor: not-allowed;
 }
 .label-important {
   background-color: #d9534f;
@@ -1987,9 +2375,6 @@ img {
 .input-mini {
   width: 60px;
 }
-.input-small {
-  width: 90px;
-}
 .input-medium {
   width: 150px;
 }
@@ -2003,24 +2388,13 @@ img {
   width: 530px;
 }
 .uneditable-input[class*="span"],
-.row-fluid .uneditable-input[class*="span"],
-input[class*="span"],
-.row-fluid input[class*="span"],
-select[class*="span"],
-.row-fluid select[class*="span"],
-textarea[class*="span"],
-.row-fluid textarea[class*="span"] {
+.row-fluid .uneditable-input[class*="span"] {
   float: none;
   margin-left: 0;
 }
 .input-append .uneditable-input[class*="span"],
 .input-prepend .uneditable-input[class*="span"],
-.row-fluid .uneditable-input[class*="span"],
-.input-append input[class*="span"],
-.input-prepend input[class*="span"],
-.row-fluid input[class*="span"],
-.row-fluid select[class*="span"],
-.row-fluid textarea[class*="span"] {
+.row-fluid .uneditable-input[class*="span"] {
   display: inline-block;
 }
 .control-group.info .control-label,
@@ -2075,6 +2449,16 @@ textarea[class*="span"],
 .form-actions:after {
   clear: both;
 }
+input.search-query {
+  padding-right: 14px;
+  padding-right: 4px \9;
+  padding-left: 14px;
+  padding-left: 4px \9;
+  margin-bottom: 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
 .form-search .input-append .search-query,
 .form-search .input-prepend .search-query {
   -webkit-border-radius: 0;
@@ -2107,6 +2491,34 @@ textarea[class*="span"],
 .form-search .help-inline,
 .form-search .uneditable-input,
 .form-search .input-prepend,
+.form-search .input-append,
+.form-search input,
+.form-inline input,
+.form-horizontal input,
+.form-search textarea,
+.form-inline textarea,
+.form-horizontal textarea,
+.form-search select,
+.form-inline select,
+.form-horizontal select,
+.form-search .help-inline,
+.form-inline .help-inline,
+.form-horizontal .help-inline,
+.form-search .uneditable-input,
+.form-inline .uneditable-input,
+.form-horizontal .uneditable-input,
+.form-search .input-prepend,
+.form-inline .input-prepend,
+.form-horizontal .input-prepend,
+.form-search .input-append,
+.form-inline .input-append,
+.form-horizontal .input-append,
+.form-search input,
+.form-search textarea,
+.form-search select,
+.form-search .help-inline,
+.form-search .uneditable-input,
+.form-search .input-prepend,
 .form-search .input-append {
   display: inline-block;
   *display: inline;
@@ -2122,7 +2534,13 @@ textarea[class*="span"],
   display: inline-block;
 }
 .form-search .input-append,
-.form-search .input-prepend {
+.form-search .input-prepend,
+.form-search .input-prepend,
+.form-inline .input-prepend,
+.form-search .input-append,
+.form-inline .input-append,
+.form-search .input-prepend,
+.form-search .input-append {
   margin-bottom: 0;
 }
 .form-search .radio,

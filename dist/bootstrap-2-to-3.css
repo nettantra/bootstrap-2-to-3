@@ -587,101 +587,65 @@ fieldset[disabled] .checkbox.inline {
 .has-feedback .input-block-level {
   padding-right: 42.5px;
 }
-.control-group.success .help-block,
-.control-group.success .control-label,
-.control-group.success .radio,
-.control-group.success .checkbox,
-.control-group.success .radio-inline,
-.control-group.success .checkbox-inline,
 .has-success .radio.inline,
 .has-success .checkbox.inline,
 .has-success .help-inline {
   color: #3c763d;
 }
-.has-success .input-block-level,
-.control-group.success .form-control {
+.has-success .input-block-level {
   border-color: #3c763d;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-.has-success .input-block-level:focus,
-.control-group.success .form-control:focus {
+.has-success .input-block-level:focus {
   border-color: #2b542c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
 }
-.has-success .add-on,
-.control-group.success .input-group-addon {
+.has-success .add-on {
   color: #3c763d;
   border-color: #3c763d;
   background-color: #dff0d8;
 }
-.control-group.success .form-control-feedback {
-  color: #3c763d;
-}
-.control-group.warning .help-block,
-.control-group.warning .control-label,
-.control-group.warning .radio,
-.control-group.warning .checkbox,
-.control-group.warning .radio-inline,
-.control-group.warning .checkbox-inline,
 .has-warning .radio.inline,
 .has-warning .checkbox.inline,
 .has-warning .help-inline {
   color: #8a6d3b;
 }
-.has-warning .input-block-level,
-.control-group.warning .form-control {
+.has-warning .input-block-level {
   border-color: #8a6d3b;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-.has-warning .input-block-level:focus,
-.control-group.warning .form-control:focus {
+.has-warning .input-block-level:focus {
   border-color: #66512c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
 }
-.has-warning .add-on,
-.control-group.warning .input-group-addon {
+.has-warning .add-on {
   color: #8a6d3b;
   border-color: #8a6d3b;
   background-color: #fcf8e3;
 }
-.control-group.warning .form-control-feedback {
-  color: #8a6d3b;
-}
-.control-group.error .help-block,
-.control-group.error .control-label,
-.control-group.error .radio,
-.control-group.error .checkbox,
-.control-group.error .radio-inline,
-.control-group.error .checkbox-inline,
 .has-error .radio.inline,
 .has-error .checkbox.inline,
 .has-error .help-inline {
   color: #a94442;
 }
-.has-error .input-block-level,
-.control-group.error .form-control {
+.has-error .input-block-level {
   border-color: #a94442;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-.has-error .input-block-level:focus,
-.control-group.error .form-control:focus {
+.has-error .input-block-level:focus {
   border-color: #843534;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
 }
-.has-error .add-on,
-.control-group.error .input-group-addon {
+.has-error .add-on {
   color: #a94442;
   border-color: #a94442;
   background-color: #f2dede;
-}
-.control-group.error .form-control-feedback {
-  color: #a94442;
 }
 .help-inline {
   display: block;
@@ -2125,18 +2089,111 @@ input.input-append .uneditable-input[class*="span"],
 .row-fluid input.input-append [class*="span"] {
   display: inline-block;
 }
+.control-group.warning .control-label,
+.control-group.warning .help-block,
+.control-group.warning .help-inline,
+.control-group.warning .help-inline {
+  color: #c09853;
+}
+.control-group.warning .checkbox,
+.control-group.warning .radio,
+.control-group.warning input,
+.control-group.warning select,
+.control-group.warning textarea {
+  color: #c09853;
+}
+.control-group.warning input,
+.control-group.warning select,
+.control-group.warning textarea {
+  border-color: #c09853;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.control-group.warning input:focus,
+.control-group.warning select:focus,
+.control-group.warning textarea:focus {
+  border-color: #a47e3c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+}
+.control-group.warning .input-prepend .add-on,
+.control-group.warning .input-append .add-on,
 .control-group.warning input.input-prepend .add-on,
 .control-group.warning input.input-append .add-on {
   color: #c09853;
   background-color: #fcf8e3;
   border-color: #c09853;
 }
+.control-group.error .control-label,
+.control-group.error .help-block,
+.control-group.error .help-inline,
+.control-group.error .help-inline {
+  color: #b94a48;
+}
+.control-group.error .checkbox,
+.control-group.error .radio,
+.control-group.error input,
+.control-group.error select,
+.control-group.error textarea {
+  color: #b94a48;
+}
+.control-group.error input,
+.control-group.error select,
+.control-group.error textarea {
+  border-color: #b94a48;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.control-group.error input:focus,
+.control-group.error select:focus,
+.control-group.error textarea:focus {
+  border-color: #953b39;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+}
+.control-group.error .input-prepend .add-on,
+.control-group.error .input-append .add-on,
 .control-group.error input.input-prepend .add-on,
 .control-group.error input.input-append .add-on {
   color: #b94a48;
   background-color: #f2dede;
   border-color: #b94a48;
 }
+.control-group.success .control-label,
+.control-group.success .help-block,
+.control-group.success .help-inline,
+.control-group.success .help-inline {
+  color: #468847;
+}
+.control-group.success .checkbox,
+.control-group.success .radio,
+.control-group.success input,
+.control-group.success select,
+.control-group.success textarea {
+  color: #468847;
+}
+.control-group.success input,
+.control-group.success select,
+.control-group.success textarea {
+  border-color: #468847;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.control-group.success input:focus,
+.control-group.success select:focus,
+.control-group.success textarea:focus {
+  border-color: #356635;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+}
+.control-group.success .input-prepend .add-on,
+.control-group.success .input-append .add-on,
 .control-group.success input.input-prepend .add-on,
 .control-group.success input.input-append .add-on {
   color: #468847;

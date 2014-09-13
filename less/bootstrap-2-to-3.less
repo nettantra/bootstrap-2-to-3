@@ -87,14 +87,29 @@ ul.inline:extend(.list-inline all) {}
 .progress-warning:extend(.progress-bar-warning all) {}
 .progress-info:danger(.progress-bar-danger all) {}
 
-input[type="color"]:extend(.form-control all) {}
-input[type="email"]:extend(.form-control all) {}
-input[type="number"]:extend(.form-control all) {}
-input[type="password"]:extend(.form-control all) {}
-input[type="tel"]:extend(.form-control all) {}
-input[type="url"]:extend(.form-control all) {}
-input[type="text"]:extend(.form-control all) {}
-select:extend(.form-control all) {}
+input[type="color"]:extend(.form-control) {}
+input[type="email"]:extend(.form-control) {}
+input[type="number"]:extend(.form-control) {}
+input[type="password"]:extend(.form-control) {}
+input[type="tel"]:extend(.form-control) {}
+input[type="url"]:extend(.form-control) {}
+input[type="text"]:extend(.form-control) {}
+select:extend(.form-control) {}
+
+input[type="color"]:extend(input[type="color"]) {}
+input[type="email"]:extend(input[type="email"]) {}
+input[type="number"]:extend(input[type="number"]) {}
+input[type="password"]:extend(input[type="password"]) {}
+input[type="tel"]:extend(input[type="tel"]) {}
+input[type="url"]:extend(input[type="url"]) {}
+input[type="text"]:extend(input[type="text"]) {}
+
+.input-mini:extend(.form-control) {}
+.input-small:extend(.form-control) {}
+.input-medium:extend(.form-control) {}
+.input-large:extend(.form-control) {}
+.input-xlarge:extend(.form-control) {}
+.input-xxlarge:extend(.form-control) {}
 
 // class to make image responsive
 img {

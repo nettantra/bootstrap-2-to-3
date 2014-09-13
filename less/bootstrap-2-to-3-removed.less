@@ -15,9 +15,13 @@
 .brand:extend(.brand all) {}
 .carousel-control:extend(.carousel-control all) {}
 .uneditable-input[class*="span"]:extend(.uneditable-input[class*="span"] all) {}
-.navbar-inverse:extend(.navbar-inverse all) {}
+
 .navbar-inner:extend(.navbar-inner all) {}
-.navbar .nav > .active:extend(.navbar .nav > .active all) {}
+.navbar-inverse .nav li > a:extend(.navbar-inverse .nav li > a all) {}
+.navbar-inverse .nav .active > a:extend(.navbar-inverse .nav .active > a all) {}
+.navbar-inverse .nav > li > a:focus:extend(.navbar-inverse .nav > li > a:focus) {}
+.navbar-inverse .nav > li > a:hover:extend(.navbar-inverse .nav > li > a:hover) {}
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle:extend(.navbar-inverse .nav li.dropdown.open > .dropdown-toggle all) {}
 
 .form-search input:extend(.form-search input) {}
 .form-inline input:extend(.form-inline input) {}
@@ -76,4 +80,8 @@ ul.nav {
   &:before,&:after {
     display: none;
   }
+}
+.navbar-inverse .navbar-inner {
+  background: none;
+  border: none;
 }

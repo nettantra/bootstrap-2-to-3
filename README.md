@@ -4,7 +4,7 @@
 
 ## Usage
 
-  - Clone the repository to athe stylesheets directory on your document root:
+  - Clone the repository to the stylesheets directory on your document root:
 
         git clone https://github.com/nettantra/bootstrap-2-to-3 /path/to/your/document/root/stylesheets
 
